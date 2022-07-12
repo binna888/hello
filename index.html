@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('ca9a141b7c376097bac5d691fff747d9');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '결혼합니다',
+        description: '김관우정빛나결혼해요',
+        imageUrl:
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MjFfMzgg%2FMDAxNjUwNTEwNjE5MTAz.xX4mHhtuniCQSNYZrkqO8dlmMVwXI4PoElGkLPzmIZMg._FcSRf7rEeFzW6ixjRVSMwiyAVMqcWHlh54ss2IDrcYg.JPEG.kim_naeun01%2F%25B9%25AB%25B7%25E1_%25C0%25CC%25B9%25CC%25C1%25F6_-_%25B2%25C9_%25BA%25BD_%25B5%25FB%25B6%25E6%25C7%25D4_%25B0%25A8%25BC%25BA_%25C6%25F9%25B9%25E8%25B0%25E6_%25BB%25E7%25C1%25F8_Flower_%25BE%25C6%25B8%25A7%25B4%25D9%25BF%25EEj-lee-pXqAMSHIfXs-unsplash.jpg&type=a340',
+        link: {
+          mobileWebUrl: 'https://pastelletter.com/Gg8eqFQMUkrXjM',
+          webUrl: 'https://pastelletter.com/Gg8eqFQMUkrXjM',
+        },
+      },
+      social: {
+        likeCount: 좋아요 수, //99999가 최대입니다
+        commentCount: 댓글 수, //99999가 최대입니다
+        sharedCount: 공유 수, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '모바일청첩장보러가기',
+          link: {
+            mobileWebUrl: 'https://pastelletter.com/Gg8eqFQMUkrXjM',
+            webUrl: 'https://pastelletter.com/Gg8eqFQMUkrXjM',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
